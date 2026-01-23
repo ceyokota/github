@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exp 2</title>
+
+    <style>
+        body {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    
+    <script>
+
+        // This code takes a user input of a color then changes the background of the webpage to that color while also displaying text telling them what color they chose! If they didn't choose a listed color, it will tell them to try choosing a color from the list next time!
+
+        var submittedColor = prompt("Name a color from the list: red, orange, yellow, green, blue, purple", "");
+        
+        var userColor = document.querySelector("body");
+        var text = document.querySelector("h1");
+
+        givenColor = submittedColor.toLowerCase();
+        var colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+
+        if (colors.includes(givenColor)) {
+            userColor.style.backgroundColor = givenColor;
+            text.append(`You chose ${givenColor}!`)
+        } else {
+            text.append(`Try choosing a listed color next time!`);
+        }
+
+        // ignore my inefficient code down here haha
+        
+        // text.append(`You chose ${givenColor}!`);
+        // if (givenColor === "red") {
+        //     userColor.style.backgroundColor = "red";
+        // } else if (givenColor === "orange") {
+        //     userColor.style.backgroundColor = "orange";
+        // } else if (givenColor === "yellow") {
+        //     userColor.style.backgroundColor = "yellow";
+        // } else if (givenColor === "green") {
+        //     userColor.style.backgroundColor = "green";
+        // } else if (givenColor === "blue") {
+        //     userColor.style.backgroundColor = "blue";
+        // } else if (givenColor === "purple") {
+        //     userColor.style.backgroundColor = "purple";
+        // } else {
+        //     text.append(` Try choosing a listed color next time!`)
+        // }
+
+    </script>
+</body>
+</html>
