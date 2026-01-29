@@ -1,9 +1,6 @@
-body {
-    display: flex;
-    max-width: 1000px;
-    margin: auto;
-    padding: 24px;
-    background-color: rgb(201, 207, 221);
+h1, h2{
+    font-family: "Libre Baskerville", serif;
+    color: black;
 }
 
 p, a, time{
@@ -12,36 +9,68 @@ p, a, time{
     color: rgb(83, 40, 40);
 }
 
-article, header{
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: auto;
+    background-color: rgb(201, 207, 221);
+    gap: 100px;
+}
+
+header {
+    display: block;
+    position: relative;
+    padding: 20px;
+    background-color: rgb(237, 241, 255);
+    border-radius: 16px;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
     background-color: beige;
-    flex: 1;
-    line-height: 1.6;
-    padding: 24px;
+    border-left: solid 20px rgb(128, 24, 24);
+    border-right: solid 20px rgb(128, 24, 24);
     background-image: linear-gradient(
     to bottom, transparent, 99%,
     rgba(0, 0, 0, 0.15)
     );
-
     background-size: 100% 2em;  
     background-repeat: repeat;
+
 }
 
-article, header, article div{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-article{
-    border-right: solid 20px rgb(128, 24, 24);
-}
-
-header{
+.left {
     border-right: solid 2px rgba(0, 0, 0, 0.15);
-    border-left: solid 20px rgb(128, 24, 24);
+    
 }
 
-h1, h2{
-    font-family: "Libre Baskerville", serif;
-    color: black;
+article div {
+    flex: 1;
+    padding: 20px;
+}
+
+#circle {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(201, 207, 221);
+    z-index: 9;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    border-radius: 999px;
+}
+
+#line {
+    width: 80px;
+    height: 20px;
+    background-color: rgb(0, 0, 0);
+    z-index: 9;
+    position: absolute;
+    right: -40px;;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 10;
 }
