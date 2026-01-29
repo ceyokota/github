@@ -34,8 +34,7 @@ article {
     border-right: solid 20px rgb(128, 24, 24);
     background-image: linear-gradient(
     to bottom, transparent, 99%,
-    rgba(0, 0, 0, 0.15)
-    );
+    rgba(0, 0, 0, 0.15) );
     background-size: 100% 2em;  
     background-repeat: repeat;
 
