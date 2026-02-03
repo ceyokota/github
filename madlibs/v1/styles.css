@@ -2,6 +2,18 @@ h1, h2, p, label, input, button{
     font-family: "Roboto", sans-serif;
 }
 
+h1{
+    font-size: 24px;
+}
+
+h2{
+    font-size: 16px;
+}
+
+p, label, input, button{
+    font-size: 14px;
+}
+
 body{
     background-color: aliceblue;
     max-width:1200px;
@@ -13,14 +25,14 @@ body{
 header{
     padding-bottom: 40px;
     width: 60%;
-    margin-left: 12%;
+    margin-left: 14%;
 
 }
 
 .paper{
     background-color: white;
     padding-top: 60px;
-    width: 800px;
+    width: 700px;
     height: 800px;
     margin: auto;
     margin-top: 20px;
@@ -58,7 +70,7 @@ header h1{
 }
 
 .line{
-    width:62%;
+    width:58%;
     height:3px;
     background-color: rgb(174, 174, 174);
     margin:auto;
@@ -161,7 +173,7 @@ button{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 1100px;
+    width: 1000px;
     margin: auto;
     padding: 50px;
     margin-top: 60px;
@@ -177,7 +189,7 @@ button{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 1100px;
+    width: 1000px;
     margin: auto;
     padding: 50px;
     margin-top: 60px;
