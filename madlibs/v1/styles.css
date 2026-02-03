@@ -1,0 +1,210 @@
+h1, h2, p, label, input{
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    background-color: aliceblue;
+    max-width:1200px;
+    max-height: 750px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header{
+    padding-bottom: 40px;
+    width: 60%;
+    margin-left: 12%;
+
+}
+
+.paper{
+    background-color: white;
+    padding-top: 60px;
+    width: 800px;
+    height: 800px;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: block;
+
+}
+
+header h1{
+    margin:0;
+}
+
+.timeline {
+    position:relative;
+}
+
+.timeline p{
+    font-size: 12px;
+}
+
+.first-dot{
+    width:10px;
+    height:10px;
+    border-radius: 999px;
+    border: 8px solid blue;
+    background-color: white;
+ 
+}
+
+.last-dot{
+    width: 14px;
+    height:14px;
+    border-radius: 999px;
+    background-color: rgb(174, 174, 174);
+}
+
+.line{
+    width:62%;
+    height:3px;
+    background-color: rgb(174, 174, 174);
+    margin:auto;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.myinfo1, .addinfo1, .myinfo2, .addinfo2{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+}
+
+.myinfo1 {
+    left: 100px;
+    bottom:-50px;
+}
+
+.addinfo1 {
+    right: 110px;
+    bottom: -44px;
+}
+
+.myinfo2 {
+    left: 110px;
+    bottom:-44px;
+}
+
+.addinfo2 {
+    right: 100px;
+    bottom: -50px;
+}
+
+.form{
+    display: block;
+    padding: 30px 100px 80px 100px;
+    width: 400px;
+    height: 800px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-group{         
+    margin: auto 1em; 
+}
+
+.form-group label {
+    text-align: left; 
+    margin-bottom: 4px;   
+}
+
+.form-group input {
+    width: 100%;
+}
+
+form input {
+    width: 100%;
+    border: 1px solid #00000034;
+    border-radius: 4px;
+    height: 32px;
+    padding-left: 12px;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #D6D9DC;
+    outline: solid blue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.048), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+form input, form label {
+    display: block;
+}
+
+form input {
+    margin-bottom: 1em;
+}
+
+button{
+    margin-top: 32px;
+    background-color: blue;
+    color: white;
+    padding: 8px 48px 8px 48px;
+    border: none;
+    border-radius: 999px;
+    margin-left: auto;
+    display: block;
+
+}
+
+.computer1{
+    display: none;
+    background-image: url("images/background.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1100px;
+    margin: auto;
+    padding: 50px;
+    margin-top: 60px;
+    border-radius: 20px;
+    border: 5px solid rgb(124, 124, 124);
+    box-shadow: inset 0 0 0 40px rgb(0, 0, 0),
+    0 8px 15px rgba(0, 0, 0, 0.766);
+}
+
+.computer2{
+    /* display: none; */
+    background-image: url("images/background.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1100px;
+    margin: auto;
+    padding: 50px;
+    margin-top: 60px;
+    border-radius: 20px;
+    border: 5px solid rgb(124, 124, 124);
+    box-shadow: inset 0 0 0 40px rgb(0, 0, 0),
+    0 8px 15px rgba(0, 0, 0, 0.766);
+}
+
+.overlay{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.727);
+}
+
+.overlay article{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 600px;
+    height: 80vh;
+    padding: 60px;
+    margin-top: 50px;
+}
