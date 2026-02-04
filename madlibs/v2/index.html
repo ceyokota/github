@@ -38,28 +38,28 @@
                 
                     <article class="form">
                         <h2>My Information</h2>
-                            <form>
-                                <div class="form-group">
+                            <form id="firstForm">
+                                <div class="formGroup">
                                     <label for="name">Full Name</label>
                                     <input type="text" name="name" id="name" required>
                                 </div>
                                     
-                                <div class="form-group">
+                                <div class="formGroup">
                                     <label for="company">Company</label>
                                     <input type="text" name="company" id="company" required>
                                 </div>
                                 
-                                <div class="form-group">
+                                <div class="formGroup">
                                     <label for="occupation">Childhood Dream Occupation</label>
                                     <input type="text" name="occupation" id="occupation" required>
                                 </div>
                                 
-                                <div class="form-group">
+                                <div class="formGroup">
                                     <label for="adj1">Adjective</label>
                                     <input type="text" name="adj1" id="adj1" required>
                                 </div>
                                 
-                                <div class="form-group">
+                                <div class="formGroup">
                                     <label for="verb1">Verb</label>
                                     <input type="text" name="verb1" id="verb1" required>
                                 </div>
@@ -91,21 +91,31 @@
                     <article class="form">
                         <h2>Additional Information</h2>
                     
-                            <form>
-                                <label for="pnoun">Plural Noun</label>
-                                <input type="text" name="pnoun" id="pnoun" required>
+                            <form id="secondForm">
+                                <div class="formGroup">
+                                    <label for="pnoun">Plural Noun</label>
+                                    <input type="text" name="pnoun" id="pnoun" required>
+                                </div>
             
-                                <label for="num">Number</label>
-                                <input type="text" name="num" id="num" required>
+                                <div class="formGroup">
+                                    <label for="num">Number</label>
+                                    <input type="text" name="num" id="num" required>
+                                </div>
             
-                                <label for="utime">Unit of Time</label>
-                                <input type="text" name="utime" id="utime" required>
+                                <div class="formGroup">
+                                    <label for="utime">Unit of Time (e.g., year, day, hour, millisecond, etc)</label>
+                                    <input type="text" name="utime" id="utime" required>
+                                </div>
             
-                                <label for="adj2">Adjective</label>
-                                <input type="text" name="adj2" id="adj2" required>
+                                <div class="formGroup">
+                                    <label for="adj2">Adjective</label>
+                                    <input type="text" name="adj2" id="adj2" required>
+                                </div>
             
-                                <label for="verb2">Verb</label>
-                                <input type="text" name="verb2" id="verb2" required>
+                                <div class="formGroup">
+                                    <label for="verb2">Verb</label>
+                                    <input type="text" name="verb2" id="verb2" required>
+                                </div>
             
                                 <button type="submit">Submit</button>
                             </form>
@@ -115,17 +125,7 @@
 
         </section>
         
-        <section class="overlay">
-            <article>
-                <h1>[Company] Careers</h1>
-                <p>Dear [Your Name],</p>
-                <p>We are thrilled to welcome you to join [Company] as a [Position] for the Summer 2026 Internship Program!</p>
-                <p>We were incredibly impressed by your [Adjective] approach to [Verb] and your passion for [Noun Plural].</p>
-                <p>The pay rate will be [Number] per [Unit of Time].</p>
-                <p>We can't wait to see how your [Adjective] ideas will [Verb] our team!</p>
-                <p>Sincerely,</p>
-                <p>The HR Team at [Company]</p>
-            </article>   
+        <section class="overlay"> 
         </section>
     </main>
 </body>
