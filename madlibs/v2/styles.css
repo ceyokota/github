@@ -119,16 +119,16 @@ h2 {
     text-align: center;
 }
 
-.formGroup{         
+form div {         
     margin: auto 1em; 
 }
 
-.formGroup label {
+form div  label {
     text-align: left; 
     margin-bottom: 4px;   
 }
 
-.formGroup input {
+form div  input {
     width: 100%;
 }
 
@@ -246,9 +246,6 @@ button:hover {
     opacity: 0;  
     animation: slideUp 0.6s ease-out forwards;
 }
-
-
-
 
 .overlay p {
     font-size: 16px;
