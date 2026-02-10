@@ -1,0 +1,272 @@
+h1, h2, p, label, input, button{
+    font-family: "Roboto", sans-serif;
+}
+
+h1{
+    font-size: 24px;
+}
+
+h2{
+    font-size: 16px;
+}
+
+p, label, input, button{
+    font-size: 14px;
+}
+
+body{
+    background-color: aliceblue;
+    max-width:1200px;
+    max-height: 750px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header{
+    padding-bottom: 40px;
+    width: 60%;
+    margin-left: 14%;
+
+}
+
+.paper{
+    background-color: white;
+    padding-top: 60px;
+    width: 700px;
+    height: 800px;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: block;
+
+}
+
+header h1{
+    margin:0;
+}
+
+.timeline {
+    position:relative;
+}
+
+.timeline p{
+    font-size: 12px;
+}
+
+.first-dot{
+    width:10px;
+    height:10px;
+    border-radius: 999px;
+    border: 8px solid blue;
+    background-color: white;
+ 
+}
+
+.last-dot{
+    width: 14px;
+    height:14px;
+    border-radius: 999px;
+    background-color: rgb(174, 174, 174);
+}
+
+.line{
+    width:58%;
+    height:3px;
+    background-color: rgb(174, 174, 174);
+    margin:auto;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.myinfo1, .addinfo1, .myinfo2, .addinfo2{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+}
+
+.myinfo1 {
+    left: 100px;
+    bottom:-50px;
+}
+
+.addinfo1 {
+    right: 110px;
+    bottom: -44px;
+}
+
+.myinfo2 {
+    left: 110px;
+    bottom:-44px;
+}
+
+.addinfo2 {
+    right: 100px;
+    bottom: -50px;
+}
+
+.form{
+    display: block;
+    padding: 30px 100px 80px 100px;
+    width: 400px;
+    height: 800px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+form div {         
+    margin: auto 1em; 
+}
+
+form div  label {
+    text-align: left; 
+    margin-bottom: 4px;   
+}
+
+form div  input {
+    width: 100%;
+}
+
+form input {
+    width: 100%;
+    border: 1px solid #00000034;
+    border-radius: 4px;
+    height: 32px;
+    padding-left: 12px;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #D6D9DC;
+    outline: solid blue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.048), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+form input, form label {
+    display: block;
+}
+
+form input {
+    margin-bottom: 1em;
+}
+
+button{
+    margin-top: 32px;
+    background-color: blue;
+    color: white;
+    padding: 8px 48px 8px 48px;
+    border: none;
+    border-radius: 999px;
+    margin-left: auto;
+    display: block;
+
+}
+
+button:hover {
+    background-color: #002255; 
+}
+
+.userInput {
+    color: blue;
+    font-weight: 700;
+}
+
+
+
+.computer1{
+    /* display: none; */
+    background-image: url("images/background.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1000px;
+    margin: auto;
+    padding: 50px;
+    margin-top: 60px;
+    border-radius: 20px;
+    border: 5px solid rgb(124, 124, 124);
+    box-shadow: inset 0 0 0 40px rgb(0, 0, 0),
+    0 8px 15px rgba(0, 0, 0, 0.766);
+}
+
+.computer2{
+    display: none;
+    background-image: url("images/background.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1000px;
+    margin: auto;
+    padding: 50px;
+    margin-top: 60px;
+    border-radius: 20px;
+    border: 5px solid rgb(124, 124, 124);
+    box-shadow: inset 0 0 0 40px rgb(0, 0, 0),
+    0 8px 15px rgba(0, 0, 0, 0.766);
+}
+
+.overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.727);
+    z-index: 1000;
+
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translate(-50%, 100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+.overlay article{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 800px;
+    height: 90vh;
+    margin-top: 50px;
+    transform: translate(-50%, 100%);
+    opacity: 0;  
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+.overlay p {
+    font-size: 16px;
+}
+
+.overlay h1 {
+    font-size: 36px;
+}
+
+#overlayHeader {
+    background-color: lightskyblue;    
+    width: 100%;               
+    padding: 20px;              
+    text-align: center;          
+    box-sizing: border-box;     
+}
+
+#overlayParagraphs {
+    margin: 0;                  
+    color: rgb(0, 0, 0);             
+    font-size: 36px; 
+    padding: 100px;   
+    padding-top: 50px;  
+}

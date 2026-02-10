@@ -32,7 +32,6 @@
         overlay.style.display = 'block';
 
         overlay.innerHTML = 
-        overlay.innerHTML = 
         `<article>
             <div id="overlayHeader">
             <h1><span class="userInput">${company}</span> Careers</h1>
@@ -81,13 +80,18 @@
         
                 <p>Sincerely,</p>
                 <p>The HR Team at <span class="userInput">${company}</span></p>
+
+                <button type="button" id="restartBtn">Restart</button>
             </div>
         </article>`;
-    });
+        const restartBtn = document.querySelector('#restartBtn');
 
-
-
-
-   
-
+        restartBtn.addEventListener('click', function(){
+            firstForm.reset();
+            secondForm.reset();
+            computer1.style.display = 'block';
+            computer2.style.display = 'none';
+            overlay.style.display = 'none';
+        });
+    }); 
 })();
