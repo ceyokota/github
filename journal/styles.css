@@ -3,7 +3,7 @@ h1, h2{
     color: black;
 }
 
-p, a, time{
+p, a, time, i, figcaption{
     font-family: "Lato", sans-serif;
     line-height: 1.8em;
     color: rgb(83, 40, 40);
@@ -72,4 +72,8 @@ article div {
     top: 50%;
     transform: translate(0, -50%);
     z-index: 10;
+}
+
+figure, img {
+    flex: 1;
 }
