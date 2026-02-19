@@ -13,6 +13,7 @@ body {
 .door {
     flex: 1;
     object-fit: cover;
+    height: 750px;
 }
 
 #container {
