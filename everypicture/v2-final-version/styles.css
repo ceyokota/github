@@ -4,9 +4,10 @@ body {
     color: #666;
     text-align: center;
     display: flex;
-    /* max-width: 1200px; */
+    max-width: 1200px;
     max-height: 750px;
     margin:auto;
+    overflow: hidden;
 }
 
 .door {
