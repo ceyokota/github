@@ -11,6 +11,7 @@
             theImg.className = 'start';
             document.querySelectorAll('#container section').forEach(function(section) {
                 section.className = "hide";
+                // section.style.zIndex="0";
             }); 
         });
 
@@ -28,7 +29,8 @@
         const textSection = document.querySelector(`#${thisCorner}text`);
         if (textSection) {
             textSection.className = "show";
-    }
+            // textSection.style.zIndex="9";
+        }
         
     }
 
