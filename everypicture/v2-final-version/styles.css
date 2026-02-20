@@ -100,6 +100,12 @@ section {
     left: 30%;
 }
 
+#dominiontext {
+    top: 50%;
+    width: 35%;
+    left: 75%;
+}
+
 #couptext {
     top:50%;
 }
