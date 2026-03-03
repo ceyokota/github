@@ -1,0 +1,171 @@
+body {
+    background-color: rgb(56, 36, 27);
+    font-family: Arial;
+    color: #666;
+    text-align: center;
+    display: flex;
+    max-width: 1200px;
+    max-height: 750px;
+    margin:auto;
+    overflow: hidden;
+}
+
+.door {
+    flex: 1;
+    object-fit: cover;
+    height: 750px;
+}
+
+#container {
+    width: 600px;
+    height: 750px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+
+#container div {
+    position: absolute;
+}
+
+#container img {
+    display: block;
+    position: absolute;
+    transition: all 3s ease;
+}
+
+/* these are values were used to place the hotspots correctly on the right board games on the screen (it took a lot of guess and checking!!) */
+
+#coup {
+    top: 120px;
+    left: 124px;
+    width: 72px;
+    height: 35px;
+    transform: skew(12deg) rotate(10deg);
+}
+
+#shadowhunters {
+    top: 290px;
+    left: 490px;
+    width: 28px;
+    height: 150px;
+    transform: skew(2deg) rotate(8deg);
+}
+
+#dominion {
+    top: 230px;
+    left: 235px;
+    width: 28px;
+    height: 110px;
+    transform: skew(-2deg) rotate(-3deg);
+}
+
+p {
+    margin: 0;
+    font-family: "Quintessential", serif;
+    font-size: 16px;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.822);
+    padding: 20px;
+    border-radius: 20px;
+    color: black;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    width: 75%;
+    transition: all 3s ease;  
+    display: flex;
+    flex-direction: column;    
+}
+
+#shadowhunterstext img, #shadowhunterstext p, #dominiontext img, #dominiontext p {
+    position: relative;
+
+}
+
+/* these are values to make sure the zooming was zooming in the correct position based on the board game hovered (it also took a lot of guess and check) */
+
+#shadowhunterstext {
+    top: 50%;
+    width: 40%;
+    left: 30%;
+}
+
+#dominiontext {
+    top: 50%;
+    width: 35%;
+    left: 75%;
+}
+
+#couptext {
+    top:50%;
+}
+
+/* making the images fit in the informationi boxes */
+
+#shadowhunterstext img, #dominiontext img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+/* these class names below are "states" that images/hotspots are changed to via javascript on hover to allow for zooming/showing cards */
+
+.hide {
+    opacity: 0;
+    z-index: -5;
+}
+
+.show {
+    opacity: 1;
+    z-index: 9;
+}
+
+
+.start {
+    width: 600px;
+    left: 0;
+    top: 0;
+    /* z-index: 9; */
+}
+
+.coupchange,
+.shadowhunterschange,
+.dominionchange {
+    width: 2000px;
+}
+
+.coupchange {
+    top: -320px;
+    left: -400px;
+}
+
+.shadowhunterschange {
+    top: -820px;
+    left: -1170px;
+}
+
+.dominionchange {
+    top: -620px;
+    left: -600px;
+}
+
+#hover{
+    background-color: rgb(56, 36, 27);
+    position: absolute;
+    left: 50%;
+    top: 2%;
+    transform: translate(-50%, 0%);
+    padding: 4px 16px 4px 16px;
+    border-radius: 4px;
+    color: white;
+}
+
+#hover p{
+    font-size: 20px;
+}
