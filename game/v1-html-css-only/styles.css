@@ -1,0 +1,148 @@
+#container {
+    width: 1200px;
+    height: 750px;
+    background-color: #FFF7ED;
+    font-family: "Capriola";
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.bg-splash {
+    position: absolute;
+    width: 1167px;
+    height: 1167px;
+    z-index: 0;
+    background-color: #ffe2e2c6;
+    border-radius: 999px;
+    filter: blur(10px);
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+h1{
+    text-align: center;
+    color: #E77082;
+    position: relative;
+    z-index: 10;
+}
+
+.top-buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.rules {
+    border: #61333A solid 2px;
+    color: #61333A;
+    background-color: #FFF7ED;
+}
+
+.quit {
+    border: #A9142B solid 2px;
+    color: #A9142B;
+    background-color: #FFF7ED;
+}
+
+button {
+    font-family: "Capriola";
+    font-size: 16px;
+    background-color: #FFF7ED;
+    border-radius: 16px;
+    border: 2px black solid;
+    padding: 8px 16px 8px 16px;
+}
+
+.rolling {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rolling button {
+    font-size: 16px;
+    padding: 16px 32px 16px 32px;
+}
+
+.dice img {
+    filter: drop-shadow(0 8px 12px #a54f5c6b);
+}
+
+.pass {
+    border: 4px #E77082 solid;
+    color: #E77082;
+    background-color: #FFFAF4;
+}
+
+.roll {
+    border: 4px #E77082 solid;
+    color: #FFFAF4;
+    background-color: #E77082;
+}
+
+.bunny {
+    position: absolute;
+    right:-100px;
+    bottom:0;
+    z-index: 0;
+}
+
+.bear {
+    position: absolute;
+    left:-100px;
+    bottom:0;
+    z-index: 0;
+}
+
+.bear-points, .bunny-points {
+    position: absolute;
+    border-radius: 16px;
+    padding: 16px 48px 16px 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+}
+
+.bear-points {
+    border: 4px #723A15 solid;
+    background-color: #F9E7DB;
+    bottom: 36px;
+    left: 360px;
+    color: #723A15
+}
+
+.bunny-points {
+    border: 4px #E77082 solid;
+    background-color: #FFFAF4;
+    z-index: 10;
+    bottom: 36px;
+    right: 360px;
+    color: #E77082
+}
+
+.points {
+    font-size: 48px;
+    margin:0;
+    padding:0;
+}
+
+.points-tag {
+    font-size: 16px;
+    margin:0;
+    padding:0;
+}
+
+
+
+
