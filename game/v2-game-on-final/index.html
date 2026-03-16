@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V1 Game On Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <section id="container">
+
+        <section class="overlay"></section>
+
+        <section class="modal">
+            <h1>Game of Mofusand</h1>
+            <p>Grab a friend to play. Get to 30 points to win!</p>
+            <div class="rules">
+                <section>
+                    <div>
+                        <img src="images/1die.png">
+                        <img src="images/1die.png">
+                    </div>
+                    <p>add the amount to your score!</p>
+                </section>
+                <section>
+                    <div>
+                        <img src="images/1die.png" id="fake-dice">
+                        <img src="images/1die.png">
+                    </div>
+                    <p>pass your turn</p>
+                </section>
+                <section>
+                    <div>
+                        <img src="images/1die.png">
+                        <img src="images/1die.png">
+                    </div>
+                    <p>your score gets zero’ed out</p>
+                </section>
+            </div>
+            <button id="start">Let's Go!</button>
+        </section>
+
+        <h1 id="game">Player 1's Turn</h1>
+
+        <div class="bg-splash-bear"></div>
+
+        <section class="top-buttons">
+            <button id="quit">Quit</button>
+            <button id="rules">Rules</button>
+        </section>
+
+        <section class="rolling">
+            <section class="dice">
+                <img src="images/1die.png" width="200" height="200">
+                <img src="images/1die.png" width="200" height="200">
+            </section>
+            <section class="actions">
+                <button class="roll">Roll</button>
+                <button class="pass">Pass</button>
+            </section>
+        </section>
+
+
+        <img src="images/mofubear.png" class="bear">
+        <section class="bear-points">
+            <p class="points-tag">points</p>
+            <p class="points">0</p>
+        </section>
+
+        <img src="images/mofubunny.png" class="bunny">
+        <section class="bunny-points">
+            <p class="points-tag">points</p>
+            <p class="points">0</p>
+        </section>
+
+    
+    </section>
+    
+</body>
+</html>
