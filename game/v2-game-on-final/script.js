@@ -20,6 +20,7 @@
         console.log('close');
         document.querySelector('.overlay').style.display = "none";
         document.querySelector('.modal').style.display = "none";
+        document.querySelector('#start').innerHTML="Continue";
         setUpTurn();
         
     });
@@ -40,13 +41,14 @@
         game.innerHTML = `<p>${gameData.players[gameData.index]}'s turn!</p>`;
     }
 
-    document.querySelector('.roll').addEventListener('click', function(){
+    document.querySelector('#roll').addEventListener('click', function(){
         console.log('Roll the Dice!');
         throwDice();
     });
 
-    document.querySelector('.pass').addEventListener('click',function(){
+    document.querySelector('#pass').addEventListener('click',function(){
         gameData.index ? (gameData.index = 0) : (gameData.index = 1);
+        switchPlayer();
         setUpTurn();
     });
 
@@ -57,35 +59,46 @@
         console.log(gameData.roll1);
         console.log(gameData.roll2);
         document.querySelector(".dice").innerHTML=
-        `<img src="images/${gameData.dice[gameData.roll1-1]}" width="200" height="200">
-        <img src="images/${gameData.dice[gameData.roll2-1]}" width="200" height="200">`;
+        `<img src="images/${gameData.dice[gameData.roll1-1]}" width="180" height="180">
+        <img src="images/${gameData.dice[gameData.roll2-1]}" width="180" height="180">`;
         gameData.rollSum = gameData.roll1 + gameData.roll2;
 
         //if two 1's are rolled...
         if (gameData.rollSum === 2){
-            document.querySelector('.roll').disabled = true;
             console.log('snake eyes!');
             game.innerHTML = '<p>Oh snap! Snake eyes!</p>';
+            document.querySelectorAll(".actions button").forEach(function(btn){
+                btn.style.visibility = "hidden";
+            });
             gameData.score[gameData.index]=0;
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             showCurrentScore();
             setTimeout(function(){
-                document.querySelector('.roll').disabled = false;
+                document.querySelectorAll(".actions button").forEach(function(btn){
+                    btn.style.visibility = "visible";
+                });
                 setUpTurn();
             }, 2000);
+            switchPlayer();
         }
 
         //if either die is a 1...
         else if(gameData.roll1 === 1 || gameData.roll2 === 1){
-            document.querySelector('.roll').disabled = true;
             console.log('one of the two dice rolled a 1');
+            document.querySelectorAll(".actions button").forEach(function(btn){
+                btn.style.visibility = "hidden";
+            });
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
+            console.log(gameData.players[gameData.index]);
             game.innerHTML = `<p>You rolled a 1. Switching to ${gameData.players[gameData.index]}</p>`;
             showCurrentScore();
             setTimeout(function(){
-                document.querySelector('.roll').disabled = false;
+                document.querySelectorAll(".actions button").forEach(function(btn){
+                    btn.style.visibility = "visible";
+                });
                 setUpTurn();
             }, 2000);
+            switchPlayer();
         }
 
         //if neither die is a 1...
@@ -100,6 +113,13 @@
         if (gameData.score[gameData.index] > gameData.gameEnd){
             showCurrentScore();
             console.log (`${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!`)
+            document.querySelector('#winningtext').innerHTML= `${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!`;
+            document.querySelector('.winningmodal').style.display = "flex";
+            document.querySelector('.overlay').style.display = "block";
+            document.querySelector('#restart').addEventListener('click', function(){
+                console.log('quit');
+                location.reload();
+            });
         } else {
             showCurrentScore();
         }
@@ -108,6 +128,29 @@
     function showCurrentScore(){
         document.querySelector('.bear-points .points').innerHTML = `${gameData.score[0]}`;
         document.querySelector('.bunny-points .points').innerHTML = ` ${gameData.score[1]}`;
+    }
+
+    function switchPlayer(){
+        if(gameData.players[gameData.index]=="Player 1"){
+            console.log("images for player 1");
+            document.querySelector(".bg-splash-bunny").className = "bg-splash-bear";
+            game.style.color= "#723A15";
+            document.querySelector('#pass').className="passbear";
+            document.querySelector('#roll').className="rollbear";
+            document.querySelectorAll('.dice img').forEach(function(img){
+                img.style.filter = "drop-shadow(0 8px 12px rgb(215, 130, 129))";
+            });
+            
+        } else if (gameData.players[gameData.index]=="Player 2"){
+            console.log("images for player 2");
+            document.querySelector(".bg-splash-bear").className = "bg-splash-bunny";
+            game.style.color= "#E77082";
+            document.querySelector('#pass').className="passbunny";
+            document.querySelector('#roll').className="rollbunny";
+            document.querySelectorAll('.dice img').forEach(function(img){
+                img.style.filter = "drop-shadow(0 8px 12px rgb(183, 108, 64))";
+            });
+        }
     }
 
 })();

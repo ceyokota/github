@@ -8,7 +8,7 @@
     overflow: hidden;
 }
 
-.bg-splash-bear {
+.bg-splash-bunny {
     position: absolute;
     width: 1167px;
     height: 1167px;
@@ -21,9 +21,22 @@
     transform: translate(-50%, -50%);
 }
 
+.bg-splash-bear {
+    position: absolute;
+    width: 1167px;
+    height: 1167px;
+    z-index: 0;
+    background-color: #d4b9a88a;
+    border-radius: 999px;
+    filter: blur(10px);
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
 h1{
     text-align: center;
-    color: #E77082;
+    color: #723A15;
     position: relative;
     z-index: 1;
 }
@@ -82,30 +95,56 @@ button {
 }
 
 .dice img {
-    filter: drop-shadow(0 8px 12px #a54f5c6b);
+    filter: drop-shadow(0 8px 12px rgb(183, 108, 64));
 }
 
-.pass {
+.passbear {
+    border: 4px #723A15 solid;
+    color: #723A15;
+    background-color: #F9E7DB;
+}
+
+.passbear:hover{
+    border: 4px #42200a solid;
+    color: #42200a;
+    background-color: #ae8b8b;
+    cursor: pointer;
+}
+
+.passbunny {
     border: 4px #E77082 solid;
     color: #E77082;
     background-color: #FFFAF4;
 }
 
-.pass:hover{
-    background-color: #ae8b8b;
+.passbunny:hover {
     border: 4px #a34351 solid;
     color: #a34351;
+    background-color: #d9b9b9;
     cursor: pointer;
 }
 
-.roll {
+.rollbear {
+    border: 4px #723A15 solid;
+    color: #F9E7DB;
+    background-color: #723A15;
+}
+.rollbear:hover{
+    background-color: #42200a;
+    border: 4px #42200a solid;
+    color: #ae8b8b;
+    cursor: pointer;
+}
+
+.rollbunny {
     border: 4px #E77082 solid;
     color: #FFFAF4;
     background-color: #E77082;
 }
-.roll:hover{
+.rollbunny:hover{
     background-color: #a34351;
     border: 4px #a34351 solid;
+    color: #d9b9b9;
     cursor: pointer;
 }
 
@@ -240,4 +279,44 @@ button {
 
 #fake-dice {
     opacity: 0;
+}
+
+.winningmodal{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 500px;
+    background-color: #FFF7ED;
+    border-radius: 40px;
+    z-index: 9;
+    padding: 40px;
+    display:none;
+}
+
+#restart {
+    font-size: 24px;
+    padding: 16px 32px 16px 32px;
+    border: 4px #E77082 solid;
+    color: #FFFAF4;
+    background-color: #E77082;
+    display: inline-block;
+    align-self: center;
+}
+
+#restart:hover{
+    background-color: #a34351;
+    border: 4px #a34351 solid;
+    cursor: pointer;
+}
+
+
+.winningmodal h1{
+    margin:0;
+    padding: 0;
+    color: black;
 }
