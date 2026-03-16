@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>V1 Game On Project</title>
+    <title>Final Game On Project</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
@@ -13,9 +13,9 @@
 <body>
 
     <audio id="bgMusic" autoplay loop>
-        <source src="music/littleroot-town.mp3" type="audio/mpeg">
+        <source src="audio/littleroot-town.mp3">
     </audio>
-    <audio id="clickSound" src="music/click.mp3" preload="auto"></audio>
+    <audio id="clickSound" src="audio/click.mp3"></audio>
 
     <section id="container">
 
@@ -27,22 +27,22 @@
             <div class="rules">
                 <section>
                     <div>
-                        <img src="images/randomdie.png">
-                        <img src="images/randomdie.png">
+                        <img src="images/randomdie.png" alt="random dice">
+                        <img src="images/randomdie.png" alt="random dice">
                     </div>
                     <p>add the amount to your score!</p>
                 </section>
                 <section>
                     <div>
-                        <img src="images/randomdie.png">
-                        <img src="images/1die.png">
+                        <img src="images/randomdie.png" alt="random dice">
+                        <img src="images/1die.png" alt="dice value 1">
                     </div>
                     <p>pass your turn</p>
                 </section>
                 <section>
                     <div>
-                        <img src="images/1die.png">
-                        <img src="images/1die.png">
+                        <img src="images/1die.png" alt="dice value 1">
+                        <img src="images/1die.png" alt="dice value 1">
                     </div>
                     <p>your score gets zero’ed out</p>
                 </section>
@@ -66,8 +66,8 @@
 
         <section class="rolling">
             <section class="dice">
-                <img src="images/1die.png" width="180" height="180">
-                <img src="images/1die.png" width="180" height="180">
+                <img src="images/1die.png" width="180" height="180" alt="dice">
+                <img src="images/1die.png" width="180" height="180" alt="dice">
             </section>
             <section class="actions">
                 <button id="roll" class="rollbear">Roll</button>
@@ -76,13 +76,13 @@
         </section>
 
 
-        <img src="images/mofubear.png" class="bear">
+        <img src="images/mofubear.png" class="bear" alt="mofusand bear">
         <section class="bear-points">
             <p class="points-tag">points</p>
             <p class="points">0</p>
         </section>
 
-        <img src="images/mofubunny.png" class="bunny">
+        <img src="images/mofubunny.png" class="bunny" alt="mofusand bunny">
         <section class="bunny-points">
             <p class="points-tag">points</p>
             <p class="points">0</p>
