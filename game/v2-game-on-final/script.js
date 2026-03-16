@@ -28,6 +28,11 @@
     //making music a lil quieter
     document.querySelector('#bgMusic').volume = 0.5; 
 
+    //press button to start music
+    document.querySelector('button').addEventListener('click',function(){
+        document.querySelector('#bgMusic').play();
+    });
+
 
     document.querySelector('#start').addEventListener('click', function(){
         console.log('close');
