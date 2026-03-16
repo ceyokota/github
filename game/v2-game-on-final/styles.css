@@ -65,12 +65,30 @@ button {
     z-index: 7;
 }
 
+#quit:hover {
+    border: #a9142a81 solid 2px;
+    color: #a9142a;
+    font-size: 12px;
+    background-color: #e3c9b6;
+    z-index: 7;
+    cursor: pointer;
+}
+
 #rules {
     border: #0000007a solid 2px;
     color: #000000;
     font-size: 12px;
     background-color: #FFF7ED;
     z-index: 7;
+}
+
+#rules:hover {
+    border: #0000007a solid 2px;
+    color: #000000;
+    font-size: 12px;
+    background-color: #e3c9b6;
+    z-index: 7;
+    cursor: pointer;
 }
 
 .rolling {
@@ -95,7 +113,7 @@ button {
 }
 
 .dice img {
-    filter: drop-shadow(0 8px 12px rgb(183, 108, 64));
+    filter: drop-shadow(0 8px 12px rgb(192, 143, 134));
 }
 
 .passbear {
@@ -277,9 +295,6 @@ button {
     width: 130px;
 }
 
-#fake-dice {
-    opacity: 0;
-}
 
 .winningmodal{
     position: absolute;

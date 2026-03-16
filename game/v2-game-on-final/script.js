@@ -16,6 +16,19 @@
         gameEnd: 29
     };
 
+    //clicking sound for clicking buttons
+    const buttons = document.querySelectorAll('button');
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', function() {
+        document.querySelector('#clickSound').currentTime = 0.2;
+        document.querySelector('#clickSound').play();
+      });
+    }
+
+    //making music a lil quieter
+    document.querySelector('#bgMusic').volume = 0.5; 
+
+
     document.querySelector('#start').addEventListener('click', function(){
         console.log('close');
         document.querySelector('.overlay').style.display = "none";
@@ -137,9 +150,6 @@
             game.style.color= "#723A15";
             document.querySelector('#pass').className="passbear";
             document.querySelector('#roll').className="rollbear";
-            document.querySelectorAll('.dice img').forEach(function(img){
-                img.style.filter = "drop-shadow(0 8px 12px rgb(215, 130, 129))";
-            });
             
         } else if (gameData.players[gameData.index]=="Player 2"){
             console.log("images for player 2");
@@ -147,9 +157,6 @@
             game.style.color= "#E77082";
             document.querySelector('#pass').className="passbunny";
             document.querySelector('#roll').className="rollbunny";
-            document.querySelectorAll('.dice img').forEach(function(img){
-                img.style.filter = "drop-shadow(0 8px 12px rgb(183, 108, 64))";
-            });
         }
     }
 
