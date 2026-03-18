@@ -21,13 +21,13 @@
     for (let i = 0; i < buttons.length; i++) {
       buttons[i].addEventListener('click', function() {
         document.querySelector('#clickSound').currentTime = 0.2;
-        document.querySelector('#clickSound').volume = 0.8;
+        document.querySelector('#clickSound').volume = 0.6;
         document.querySelector('#clickSound').play();
       });
     }
 
     //making music a lil quieter
-    document.querySelector('#bgMusic').volume = 0.3; 
+    document.querySelector('#bgMusic').volume = 0.2; 
 
     //press button to start music
     document.querySelector('button').addEventListener('click',function(){
