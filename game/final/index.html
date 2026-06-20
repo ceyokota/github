@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mofusand Dice Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <audio id="bgMusic" loop>
+        <source src="audio/littleroot-town.mp3">
+    </audio>
+    <audio id="clickSound" src="audio/click.mp3"></audio>
+
+    <section id="container">
+
+        <section class="overlay"></section>
+
+        <section class="modal">
+            <h1>Mofusand Dice Game</h1>
+            <p>Grab a friend to play. Get to 30 points to win!</p>
+            <div class="rules">
+                <section>
+                    <div>
+                        <img src="images/randomdie.png" alt="random dice">
+                        <img src="images/randomdie.png" alt="random dice">
+                    </div>
+                    <p>add the amount to your score!</p>
+                </section>
+                <section>
+                    <div>
+                        <img src="images/randomdie.png" alt="random dice">
+                        <img src="images/1die.png" alt="dice value 1">
+                    </div>
+                    <p>pass your turn</p>
+                </section>
+                <section>
+                    <div>
+                        <img src="images/1die.png" alt="dice value 1">
+                        <img src="images/1die.png" alt="dice value 1">
+                    </div>
+                    <p>your score gets zero’ed out</p>
+                </section>
+            </div>
+            <button id="start">Let's Go!</button>
+        </section>
+
+        <section class="winningmodal">
+            <h1 id="winningtext"></h1>
+            <button id="restart">Restart</button>
+        </section>
+
+        <h1 id="game">Player 1's Turn</h1>
+
+        <div class="bg-splash-bear"></div>
+
+        <section class="top-buttons">
+            <button id="rules">Rules</button>
+            <button id="quit" class="restart">Quit</button>
+        </section>
+
+        <section class="rolling">
+            <section class="dice">
+                <img src="images/1die.png" width="180" height="180" alt="dice">
+                <img src="images/1die.png" width="180" height="180" alt="dice">
+            </section>
+            <section class="actions">
+                <button id="roll" class="rollbear">Roll</button>
+                <button id="pass" class="passbear">Pass</button>
+            </section>
+        </section>
+
+
+        <img src="images/mofubear.png" class="bear" alt="mofusand bear">
+        <section class="bear-points">
+            <p class="points-tag">points</p>
+            <p class="points">0</p>
+        </section>
+
+        <img src="images/mofubunny.png" class="bunny" alt="mofusand bunny">
+        <section class="bunny-points">
+            <p class="points-tag">points</p>
+            <p class="points">0</p>
+        </section>
+
+    
+    </section>
+    
+</body>
+</html>
